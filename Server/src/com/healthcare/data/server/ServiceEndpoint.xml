@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service-endpoints xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+				   xsi:schemaLocation="http://www.healthcare.com/data/RpcDef protobuf/rpc/RpcDef.xsd ">
+  <endpoint name="ReportService">
+    <location>com.healthcare.data.server.service.ReportService</location>
+  </endpoint>
+  <endpoint name="PingService">
+    <location>com.healthcare.data.server.service.PingService</location>
+  </endpoint>
+  
+  <endpoint name="StatusReportService">
+    <location>com.healthcare.data.server.service.StatusReportService</location>
+  </endpoint>
+</service-endpoints>

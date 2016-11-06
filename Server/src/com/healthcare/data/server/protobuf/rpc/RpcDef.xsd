@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.healthcare.com/data/RpcDef"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.healthcare.com/data/RpcDef">
+
+	<element name="service-endpoints" type="tns:service-endpoints"></element>
+
+	<complexType name="service-endpoint">
+		<sequence>
+			<element name="location" type="string"></element>
+		</sequence>
+		<attribute name="name" type="string"></attribute>
+	</complexType>
+
+	<complexType name="service-endpoints">
+		<sequence>
+			<element name="endpoint" type="tns:service-endpoint"
+				maxOccurs="unbounded" minOccurs="0">
+			</element>
+		</sequence>
+	</complexType>
+</schema>

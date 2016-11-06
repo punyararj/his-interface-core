@@ -1,0 +1,45 @@
+package HealcareSolution.Client.CoreLib.Model.Connector.HCSDS.RPC;
+
+option java_package = "com.healthcare.data.model";
+option java_outer_classname = "LabDeviceResultMessageProtos";
+
+message LabDeviceResultMessage {
+
+  required string device_id = 1;
+  optional string device_uid = 2;
+  optional string operator_id = 3;
+  optional int64 report_time = 4;
+  optional string sample_id = 5;
+  optional string test_order_number = 6;
+  optional string p_hn=7;
+  required ResultType result_type = 8 [default = NORMAL];
+  optional string comment = 9;
+  optional QCDataInfo qc_info = 10;
+  repeated ResultItemMessage result_items = 11;
+  
+  enum ResultType {
+    NORMAL = 1;
+    CALIBRATE = 2;
+    QULITY_CONTROL = 4;
+    REJECT = 5;
+  }
+  
+  message QCDataInfo{
+    optional string lot_number=1;
+    optional string lot_description=2;
+    optional string level=3;
+  }
+
+  message ResultItemMessage{
+    required string name = 1;
+    optional string type = 2;
+    optional string value = 3;
+    optional string units = 4;
+    optional string status = 5;
+    optional int64 data_time = 6;
+    optional string comment = 7;
+    optional string abnormalflag = 8;
+    optional int64 result_time = 9;
+  }
+
+}

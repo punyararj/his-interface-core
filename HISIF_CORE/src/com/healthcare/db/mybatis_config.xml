@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/pocprod?useUnicode=true&amp;characterEncoding=utf8"/>
+        <property name="username" value="root"/>
+        <property name="password" value=""/> 
+        <!-- <property name="password" value="hcs1112"/>-->
+        <property name="driver.encoding" value="UTF8"/>
+        <property name="driver.zeroDateTimeBehavior" value="convertToNull"/>
+        <property name="poolPingQuery" value="SELECT 1 FROM dual"/>
+        <property name="poolPingEnabled" value="true"/>
+        <property name="poolPingConnectionsNotUsedFor" value="43200"/>
+       <!--  ?zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=UTF-8&characterSetResults=UTF-8 -->
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+  	<!-- <mapper resource="com/healthcare/db/sqlmap/ActMapper.xml"/>
+  	
+  	<mapper resource="com/healthcare/db/sqlmap/AnalyzerMapper.xml"/>
+  	
+    <mapper resource="com/healthcare/db/sqlmap/NewtestMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/NewTestitemMapper.xml"/>
+    
+    
+    <mapper resource="com/healthcare/db/sqlmap/ItemdataMapper.xml"/>
+    
+    
+    
+    <mapper resource="com/healthcare/db/sqlmap/QcMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/QcDetailsMapper.xml"/>-->
+    <mapper resource="com/healthcare/db/sqlmap/IqmDatasetItemMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/IqmDatasetMapper.xml"/> 
+    
+    <mapper resource="com/healthcare/db/sqlmap/ActMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/AnalyzerMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/WardMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/ItemMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/ItemmappingMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/TestMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/TestResultMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/TestitemMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/StaffMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/QcMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/QcitemMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/LotMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/PatientMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/TestChangeRevisionsMapper.xml"/>
+    
+    <mapper resource="com/healthcare/db/sqlmap/SystemconfigureMapper.xml"/>
+    <mapper resource="com/healthcare/db/sqlmap/ItemConversionMapper.xml"/>
+    
+  </mappers>
+</configuration>

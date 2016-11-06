@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <classPathEntry location="C:\Users\Aon\Developing\Projects\HealthcarSolutionDataServer\EclipseProjects\Server\lib_server\mysql-connector-java-5.1.30-bin.jar" />	
+  <context id="poct" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" 
+    				connectionURL="jdbc:mysql://localhost:3306/poc2" 
+    				userId="root" password="" />
+    <javaModelGenerator targetPackage="com.healthcare.db.model" targetProject="HISIF_CORE" />
+    <sqlMapGenerator targetPackage="com.healthcare.db.sqlmap" targetProject="HISIF_CORE" />
+    
+    <javaClientGenerator targetPackage="com.healthcare.db.client" targetProject="HISIF_CORE" type="XMLMAPPER" />
+    
+   <!-- <table schema="poc2" tableName="qc"/>-->  
+   
+    <table schema="poc2" tableName="test_change_revisions" />
+    <table schema="poc2" tableName="test" /> 
+    
+    <!-- <table schema="poc2" tableName="analyzer"/>
+    <table schema="poc2" tableName="analyzer_group"/>
+    <table schema="poc2" tableName="ward"/>
+    <table schema="poc2" tableName="ward_group"/>
+    <table schema="poc2" tableName="lot"/>
+    
+    <table schema="poc2" tableName="systemconfigure" /> 
+    <table schema="poc2" tableName="itemmapping"/>
+    <table schema="poc2" tableName="item_conversion"/>-->
+    <!-- <table schema="poc2" tableName="act"/> 
+    <table schema="poc2" tableName="staff"/>
+    <table schema="poc2" tableName="analyzer"/>
+    <table schema="poc2" tableName="ward"/>
+    <table schema="poc2" tableName="itemmapping"/>
+    <table schema="poc2" tableName="test"/>
+    <table schema="poc2" tableName="testitem"/>
+    <table schema="poc2" tableName="qcitem"/>
+    <table schema="poc2" tableName="qc"/>
+    <table schema="poc2" tableName="staff"/>-->
+    <!--
+    
+    <table schema="poc2" tableName="itemdata"/>
+    <table schema="poc2" tableName="newtest" />
+    <table schema="poc2" tableName="qc_details" /> 
+    <table schema="poc2" tableName="newtestitem" /> 
+    <table schema="poc2" tableName="iqm_dataset" /> 
+     <table schema="poc2" tableName="iqm_dataset_item" />  -->
+  </context>
+  
+</generatorConfiguration>
